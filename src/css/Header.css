@@ -1,0 +1,42 @@
+.header {
+    background: linear-gradient(90deg, var(--secondary-bg) 0%, var(--playstation-blue) 50%, var(--secondary-bg) 100%);
+    padding: 16px 0;
+    border-bottom: 3px solid var(--electric-blue);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3);
+}
+
+.header-content {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 32px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border: 3px solid var(--electric-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, var(--neon-pink), var(--playstation-blue));
+    color: var(--primary-text);
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 0 20px rgba(255, 0, 128, 0.5);
+    flex-shrink: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .header-content {
+        padding: 0 16px;
+    }
+}
