@@ -19,17 +19,17 @@ const Wishlist = () => {
                     <WishlistItem 
                         title="College Football 26"
                         price="69.99"
-                        image="/images/ncaa26.jpeg"
+                        image={process.env.PUBLIC_URL +"/images/ncaa26.jpeg"}
                     />
                     <WishlistItem 
                         title="NBA 2K26"
                         price="69.99"
-                        image="/images/2k.jpeg"
+                        image={process.env.PUBLIC_URL +"/images/2k.jpeg"}
                     />
                     <WishlistItem 
                         title="Marvel Ultimate Alliance 2"
                         price="39.99"
-                        image="/images/marvel2.jpg"
+                        image={process.env.PUBLIC_URL +"/images/marvel2.jpg"}
                     />
                 </tbody>
             </table>

@@ -26,17 +26,17 @@ const Reviews = () => {
                     <GameCard 
                         title="Marvel Ultimate Alliance 2" 
                         price="39.99"
-                        image="/images/marvel2.jpg"
+                        image={process.env.PUBLIC_URL +"/images/marvel2.jpg"}
                     />
                     <GameCard 
                         title="X-Men Legends" 
                         price="29.99"
-                        image="/images/xmen.jpg"
+                        image={process.env.PUBLIC_URL +"/images/xmen.jpg"}
                     />
                     <GameCard 
                         title="X-Men Legends 2" 
                         price="34.99"
-                        image="/images/xmen2.jpg"
+                        image={process.env.PUBLIC_URL +"/images/xmen2.jpg"}
                     />
                 </div>
             </div>

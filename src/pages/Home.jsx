@@ -6,7 +6,7 @@ const Home = () => {
         <main id="home" className="main-content">
             <h1>GamesOnGames</h1>
             <div className="hero-image">
-                <img src="/images/ncaa26.jpeg" alt="EA College Football 26 - Featured Game" />
+            <img src={process.env.PUBLIC_URL + "/images/ncaa26.jpeg"} alt="EA College Football 26 - Featured Game" />
             </div>
             <div className="hero-content">
                 <div className="features">
