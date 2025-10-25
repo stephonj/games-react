@@ -1,17 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import './css/index.css';
 import Layout from './Layout';
 import Home from './pages/Home';
-import Contact from './pages/Contact';
 import Catalog from './pages/Catalog';
 import Wishlist from './pages/Wishlist';
 import Reviews from './pages/Reviews';
+import Contact from './pages/Contact';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />}/>

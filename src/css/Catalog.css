@@ -1,0 +1,19 @@
+#catalog h1 {
+    text-align: center;
+    font-size: 48px;
+    color: #00d4ff;
+    margin-bottom: 32px;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+}
+
+@media screen and (max-width: 768px) {
+    #catalog h1 {
+        font-size: 32px;
+    }
+}

@@ -1,0 +1,36 @@
+.contact-info {
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    padding: 32px;
+    border-radius: 15px;
+    border: 1px solid #404040;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.contact-info h3 {
+    color: #00d4ff;
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+.contact-info p {
+    margin-bottom: 12px;
+    font-size: 18px;
+    color: #cccccc;
+}
+
+.contact-info strong {
+    color: #00d4ff;
+}
+
+.contact-section-title {
+    margin-top: 24px;
+    margin-bottom: 12px;
+    font-size: 22px;
+    color: #00d4ff;
+}
+
+.contact-info p:hover strong {
+    color: #ff0080;
+    text-shadow: 0 0 8px rgba(255, 0, 128, 0.7);
+    transition: all 0.3s ease;
+}
