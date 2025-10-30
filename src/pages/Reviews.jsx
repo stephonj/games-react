@@ -31,7 +31,6 @@ const Reviews = () => {
         <main id="reviews" className="main-content">
             <h1>Reviews</h1>
             <div className="review-container">
-                {/* LEFT SIDE: REVIEW FORM */}
                 <div>
                     <h2>Submit A Review</h2>
                     <div className="review-form">
@@ -63,7 +62,6 @@ const Reviews = () => {
                     </div>
                 </div>
 
-                {/* RIGHT SIDE: MAP */}
                 <div>
                     <h2>Find Us Here</h2>
                     <iframe

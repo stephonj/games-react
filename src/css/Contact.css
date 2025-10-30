@@ -1,4 +1,3 @@
-/* Page Title */
 #contact h1 {
     text-align: center;
     font-size: 48px;
@@ -7,14 +6,13 @@
     text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
-/* Two-column layout for info + form */
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 48px;
 }
 
-/* ===== CONTACT FORM STYLING ===== */
+/*  CONTACT FORM STYLING  */
 .contact-form {
     background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
     padding: 32px;
@@ -30,7 +28,6 @@
     text-align: center;
 }
 
-/* Labels + Inputs */
 .contact-form label {
     color: #00d4ff;
     font-weight: 600;
@@ -76,7 +73,7 @@
     box-shadow: 0 0 10px rgba(255, 0, 128, 0.7);
 }
 
-/* Result message */
+/* Success message */
 #contact-result {
     text-align: center;
     margin-top: 12px;
@@ -84,7 +81,6 @@
     font-weight: 500;
 }
 
-/* ===== Responsive Design ===== */
 @media screen and (max-width: 768px) {
     #contact h1 {
         font-size: 32px;

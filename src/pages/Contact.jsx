@@ -32,7 +32,6 @@ const Contact = () => {
       <h1>Contact Us</h1>
 
       <div className="contact-container">
-        {/* LEFT SIDE: CONTACT INFO */}
         <div className="contact-info">
           <h3>What We Do</h3>
           <p>
@@ -78,7 +77,6 @@ const Contact = () => {
           ></iframe>
         </div>
 
-        {/* RIGHT SIDE: CONTACT FORM */}
         <div className="contact-form">
           <h3>Contact Form</h3>
 
