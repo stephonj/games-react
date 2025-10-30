@@ -1,5 +1,6 @@
 #main-nav {
     background: #1a1a1a;
+    position: relative;
 }
 
 #main-nav ul {
@@ -40,13 +41,46 @@
     text-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
 }
 
+/* Toggle button - hidden on desktop */
+#toggle-nav {
+    display: none;
+    background: #0070f3;
+    color: #ffffff;
+    border: none;
+    padding: 15px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+#toggle-nav:hover {
+    background: #0056cc;
+}
+
+/* Mobile styles */
 @media screen and (max-width: 768px) {
+    /* Show toggle button on mobile */
+    #toggle-nav {
+        display: block;
+    }
+
+    /* Hide menu by default on mobile */
+    #main-nav .hide-small {
+        display: none;
+    }
+
+    /* When menu is open, show it */
     #main-nav ul {
         flex-direction: column;
+        width: 100%;
+        gap: 0;
     }
     
     #main-nav li {
         border-bottom: 1px solid #404040;
+        flex: none;
     }
     
     #main-nav li:last-child {

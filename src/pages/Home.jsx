@@ -1,13 +1,14 @@
 import "./../css/Home.css";
 import FeatureCard from "../components/FeatureCard";
+import Slideshow from "../components/Slideshow";
 
 const Home = () => {
     return (
         <main id="home" className="main-content">
             <h1>GamesOnGames</h1>
-            <div className="hero-image">
-            <img src={process.env.PUBLIC_URL + "/images/ncaa26.jpeg"} alt="EA College Football 26 - Featured Game" />
-            </div>
+            
+            <Slideshow />
+            
             <div className="hero-content">
                 <div className="features">
                     <h3>Why GamesOnGames?</h3>
