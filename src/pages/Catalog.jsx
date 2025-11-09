@@ -1,51 +1,53 @@
 import "./../css/Catalog.css";
 import GameCard from "../components/GameCard";
+import { useState, useEffect } from "react";
 
 const Catalog = () => {
+    const [games, setGames] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchGames = async () => {
+            try {
+                const response = await fetch("https://games-server-hnd4.onrender.com/api/games");
+                const data = await response.json();
+                setGames(data);
+                setLoading(false);
+            } catch (error) {
+                console.error("Error fetching games:", error);
+                setLoading(false);
+            }
+        };
+
+        fetchGames();
+    }, []);
+
+    if (loading) {
+        return (
+            <main id="catalog" className="main-content">
+                <h1>Catalog</h1>
+                <p style={{textAlign: 'center', color: '#00d4ff', fontSize: '20px'}}>Loading games...</p>
+            </main>
+        );
+    }
+
     return (
         <main id="catalog" className="main-content">
             <h1>Catalog</h1>
             <div className="catalog-grid">
-                <GameCard 
-                    title="GTA: San Andreas" 
-                    price="19.99"
-                    image={process.env.PUBLIC_URL + "/images/gtasanandreas.jpeg"}
-                />
-                <GameCard 
-                    title="Devil May Cry" 
-                    price="29.99"
-                    image={process.env.PUBLIC_URL + "/images/devilmaycry.jpeg"}
-                />
-                <GameCard 
-                    title="NBA 2K26" 
-                    price="69.99"
-                    image={process.env.PUBLIC_URL + "/images/2k.jpeg"}
-                />
-                <GameCard 
-                    title="Marvel Ultimate Alliance" 
-                    price="39.99"
-                    image={process.env.PUBLIC_URL + "/images/marvel.jpeg"}
-                />
-                <GameCard 
-                    title="EA College Football 26" 
-                    price="69.99"
-                    image={process.env.PUBLIC_URL + "/images/ncaa26.jpeg"}
-                />
-                <GameCard 
-                    title="Elden Ring Nightreign" 
-                    price="59.99"
-                    image={process.env.PUBLIC_URL + "/images/eldenring.jpeg"}
-                />
-                <GameCard 
-                    title="X-Men Legends" 
-                    price="29.99"
-                    image={process.env.PUBLIC_URL + "/images/xmen.jpg"}
-                />
-                <GameCard 
-                    title="X-Men Legends 2" 
-                    price="34.99"
-                    image={process.env.PUBLIC_URL + "/images/xmen2.jpg"}
-                />
+                {games.map((game) => (
+                    <GameCard 
+                        key={game._id}
+                        id={game._id}
+                        title={game.title} 
+                        price={game.price.toFixed(2)}
+                        image={`https://games-server-hnd4.onrender.com/${game.img_name}`}
+                        genre={game.genre}
+                        platform={game.platform}
+                        description={game.description}
+                        releaseDate={game.release_date}
+                    />
+                ))}
             </div>
         </main>
     );
