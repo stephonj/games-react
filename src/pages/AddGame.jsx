@@ -26,10 +26,8 @@ const AddGame = () => {
     e.preventDefault();
     setMessage("");
 
-    // -------------------------
-    // CLIENT-SIDE VALIDATION
-    // Matches your Joi schema
-    // -------------------------
+    // Validation
+
     if (formData.title.length < 3) {
       return setMessage("Title must be at least 3 characters.");
     }
