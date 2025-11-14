@@ -7,6 +7,7 @@ import Catalog from './pages/Catalog';
 import Wishlist from './pages/Wishlist';
 import Reviews from './pages/Reviews';
 import Contact from './pages/Contact';
+import AddGame from './pages/AddGame';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="wishlist" element={<Wishlist />}/>
           <Route path="reviews" element={<Reviews />}/>
           <Route path="contact" element={<Contact />}/>
+          <Route path="add-game" element={<AddGame />}/>
         </Route>
       </Routes>
     </BrowserRouter>

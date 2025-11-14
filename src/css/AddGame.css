@@ -1,0 +1,34 @@
+.add-game-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: auto;
+  gap: 0.8rem;
+}
+
+.add-game-form label {
+  font-weight: bold;
+}
+
+.add-game-form input,
+.add-game-form textarea {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.add-game-form button {
+  margin-top: 1rem;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #0077ff;
+  color: white;
+  cursor: pointer;
+}
+
+.form-message {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 500;
+}

@@ -18,6 +18,7 @@ const Navigation = () => {
             <ul className={menuOpen ? "" : "hide-small"}>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/catalog">Catalog</Link></li>
+                <li><Link to="/add-game">Add Game</Link></li>
                 <li><Link to="/wishlist">Wishlist</Link></li>
                 <li><Link to="/reviews">Reviews</Link></li>
                 <li><Link to="/contact">Contact Us</Link></li>
