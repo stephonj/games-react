@@ -1,52 +1,51 @@
 import "./../css/GameCard.css";
 import { useState } from "react";
+import GameDialog from "./GameDialog";
 
 const GameCard = (props) => {
-    const [showModal, setShowModal] = useState(false);
+    const [showDialog, setShowDialog] = useState(false);
+    const [game, setGame] = useState(props);
+    const [showGame, setShowGame] = useState(true);
 
-    const openModal = () => {
-        setShowModal(true);
+    const openDialog = () => {
+        setShowDialog(true);
     };
 
-    const closeModal = () => {
-        setShowModal(false);
+    const closeDialog = () => {
+        setShowDialog(false);
     };
+
+    const updateGame = (updatedGame) => {
+        setGame(updatedGame);
+    };
+
+    const hideGame = () => {
+        setShowGame(false);
+    };
+
+    if (!showGame) {
+        return null;
+    }
 
     return (
         <>
-            <div className="game-card" onClick={openModal}>
-                <div className="game-card-image">
-                    <img src={props.image} alt={props.title} />
-                </div>
-                <h4>{props.title}</h4>
-                <p>${props.price}</p>
-                <button className="btn">Quick View</button>
-            </div>
-
-            {showModal && (
-                <div className="modal-overlay" onClick={closeModal}>
-                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                        <button className="modal-close" onClick={closeModal}>&times;</button>
-                        <div className="modal-body">
-                            <div className="modal-image">
-                                <img src={props.image} alt={props.title} />
-                            </div>
-                            <div className="modal-info">
-                                <h2>{props.title}</h2>
-                                <p><strong>Genre:</strong> {props.genre}</p>
-                                <p><strong>Platform:</strong> {props.platform}</p>
-                                <p><strong>Release Date:</strong> {props.releaseDate}</p>
-                                <p><strong>Price:</strong> ${props.price}</p>
-                                <p className="modal-description">{props.description}</p>
-                                <div className="modal-buttons">
-                                    <button className="btn">Add to Cart</button>
-                                    <button className="btn" onClick={closeModal}>Close</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            {showDialog && (
+                <GameDialog
+                    closeDialog={closeDialog}
+                    game={game}
+                    updateGame={updateGame}
+                    hideGame={hideGame}
+                />
             )}
+
+            <div className="game-card" onClick={openDialog}>
+                <div className="game-card-image">
+                    <img src={game.image} alt={game.title} />
+                </div>
+                <h4>{game.title}</h4>
+                <p>${game.price}</p>
+                <button className="btn">View Details</button>
+            </div>
         </>
     );
 };

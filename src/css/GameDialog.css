@@ -1,0 +1,176 @@
+/* Dialog Header with Edit/Delete */
+.dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #404040;
+}
+
+.dialog-header h2 {
+    margin: 0;
+    color: #00d4ff;
+}
+
+.edit-delete-links {
+    display: flex;
+    gap: 15px;
+}
+
+.icon-btn {
+    background: none;
+    border: 2px solid #404040;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-btn {
+    color: #00d4ff;
+    border-color: #00d4ff;
+}
+
+.edit-btn:hover {
+    background: #00d4ff;
+    color: #0f0f0f;
+}
+
+.delete-btn {
+    color: #ff6b35;
+    border-color: #ff6b35;
+}
+
+.delete-btn:hover {
+    background: #ff6b35;
+    color: #ffffff;
+}
+
+/* Edit Form Styles */
+.edit-form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.edit-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #00d4ff;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.image-upload-section {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+    margin: 20px 0;
+    align-items: start;
+}
+
+.image-preview {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #00d4ff;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #0f0f0f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Delete Dialog Styles */
+.delete-dialog {
+    text-align: center;
+    padding: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.delete-dialog h2 {
+    color: #ff6b35;
+    margin-bottom: 20px;
+}
+
+.delete-warning {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.delete-warning strong {
+    color: #00d4ff;
+}
+
+.delete-subtext {
+    color: #888888;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.delete-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.cancel-btn {
+    background: #404040;
+}
+
+.cancel-btn:hover {
+    background: #555555;
+}
+
+.delete-btn-confirm {
+    background: linear-gradient(45deg, #ff6b35, #ff4500);
+}
+
+.delete-btn-confirm:hover {
+    background: linear-gradient(45deg, #ff4500, #cc3700);
+}
+
+.delete-btn-confirm:disabled,
+.cancel-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .image-upload-section {
+        grid-template-columns: 1fr;
+    }
+
+    .image-preview {
+        width: 100%;
+        height: 250px;
+        margin: 0 auto;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .delete-buttons {
+        flex-direction: column;
+    }
+}
