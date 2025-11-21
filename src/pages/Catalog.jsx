@@ -9,7 +9,7 @@ const Catalog = () => {
     useEffect(() => {
         const fetchGames = async () => {
             try {
-                const response = await fetch("https://games-server-hnd4.onrender.com/api/games");
+                const response = await fetch("http://localhost:3001/api/games");
                 const data = await response.json();
                 setGames(data);
                 setLoading(false);
@@ -41,7 +41,7 @@ const Catalog = () => {
                         id={game._id}
                         title={game.title} 
                         price={game.price.toFixed(2)}
-                        image={`https://games-server-hnd4.onrender.com/${game.img_name}`}
+                        image={`http://localhost:3001/${game.img_name}`}
                         genre={game.genre}
                         platform={game.platform}
                         description={game.description}

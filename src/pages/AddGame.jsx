@@ -54,7 +54,7 @@ const AddGame = () => {
     }
 
     try {
-      const res = await fetch("https://games-server-hnd4.onrender.com/api/games", {
+      const res = await fetch("http://localhost:3001/api/games", {
         method: "POST",
         body: data,
       });
