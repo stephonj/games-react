@@ -98,26 +98,28 @@
     position: absolute;
     top: 15px;
     right: 15px;
-    background: #ff6b35;
+    background: #0070f3;  
     color: #ffffff;
     border: none;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
-    font-size: 28px;
+    font-size: 24px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s;
-    z-index: 10;
+    z-index: 100;  
+    line-height: 1;
+    font-weight: bold;
 }
 
 .modal-close:hover {
-    background: #ff4500;
-    transform: rotate(90deg);
+    background: #00d4ff;
+    transform: rotate(90deg) scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
 }
-
 .modal-body {
     display: grid;
     grid-template-columns: 1fr 1fr;
