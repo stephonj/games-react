@@ -46,7 +46,7 @@ const GameEditDialog = ({ game, closeDialog, updateGame }) => {
 
         try {
             const response = await fetch(
-                `http://localhost:3001/api/games/${game.id}`,
+                `https://games-server-hnd4.onrender.com/api/games/${game.id}`,
                 {
                     method: "PUT",
                     body: formData,
@@ -64,7 +64,7 @@ const GameEditDialog = ({ game, closeDialog, updateGame }) => {
                     platform: updatedGame.platform,
                     releaseDate: updatedGame.release_date,
                     description: updatedGame.description,
-                    image: `http://localhost:3001/api/games/${updatedGame.img_name}`,
+                    image: `https://games-server-hnd4.onrender.com/${updatedGame.img_name}`,
                 });
                 setTimeout(() => closeDialog(), 1500);
             } else {
