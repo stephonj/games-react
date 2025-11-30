@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/games-react/static/css/main.f3211267.css",
-    "main.js": "/games-react/static/js/main.2c1b1179.js",
+    "main.css": "/games-react/static/css/main.8398eee7.css",
+    "main.js": "/games-react/static/js/main.3e2b1b14.js",
     "static/media/marvel2.jpg": "/games-react/static/media/marvel2.84a46cd98a6cb411e641.jpg",
     "static/media/2k.jpeg": "/games-react/static/media/2k.93cf0880aaa179bf779f.jpeg",
     "static/media/ncaa26.jpeg": "/games-react/static/media/ncaa26.86a69cc9ae9c2048bcbb.jpeg",
     "index.html": "/games-react/index.html",
-    "main.f3211267.css.map": "/games-react/static/css/main.f3211267.css.map",
-    "main.2c1b1179.js.map": "/games-react/static/js/main.2c1b1179.js.map"
+    "main.8398eee7.css.map": "/games-react/static/css/main.8398eee7.css.map",
+    "main.3e2b1b14.js.map": "/games-react/static/js/main.3e2b1b14.js.map"
   },
   "entrypoints": [
-    "static/css/main.f3211267.css",
-    "static/js/main.2c1b1179.js"
+    "static/css/main.8398eee7.css",
+    "static/js/main.3e2b1b14.js"
   ]
 }
