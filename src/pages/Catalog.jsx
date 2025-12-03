@@ -37,8 +37,8 @@ const Catalog = () => {
             <div className="catalog-grid">
                 {games.map((game) => (
                     <GameCard 
-                        key={game._id}
-                        id={game._id}
+                        key={game._id}        
+                        id={game._id}         
                         title={game.title} 
                         price={game.price.toFixed(2)}
                         image={`https://games-server-hnd4.onrender.com/${game.img_name}`}
@@ -46,8 +46,8 @@ const Catalog = () => {
                         platform={game.platform}
                         description={game.description}
                         releaseDate={game.release_date}
-                    />
-                ))}
+                />
+            ))}
             </div>
         </main>
     );
