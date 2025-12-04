@@ -46,7 +46,7 @@ const GameEditDialog = ({ game, closeDialog, updateGame }) => {
 
         try {
             const response = await fetch(
-                `https://games-server-hnd4.onrender.com/api/games/${game.id}`,
+                `https://games-server-hnd4.onrender.com/api/games/${game._id}`,
                 {
                     method: "PUT",
                     body: formData,

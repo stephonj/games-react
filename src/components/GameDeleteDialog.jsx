@@ -10,7 +10,7 @@ const GameDeleteDialog = ({ game, closeDialog, hideGame }) => {
 
         try {
             const response = await fetch(
-                `https://games-server-hnd4.onrender.com/api/games/${game.id}`,
+                `https://games-server-hnd4.onrender.com/api/games/${game._id}`,
                 {
                     method: "DELETE",
                 }
