@@ -45,7 +45,6 @@ const GameEditDialog = ({ game, closeDialog, updateGame }) => {
         }
 
         try {
-            // FIX: Changed from game._id to game.id
             const response = await fetch(
                 `https://games-server-hnd4.onrender.com/api/games/${game.id}`,
                 {
